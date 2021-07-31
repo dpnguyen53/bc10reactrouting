@@ -9,7 +9,7 @@ import { routesHome } from "./routes";
 
 function App() {
     const renderLayoutHome = (routes) => {
-        return routes.map((item, index) => {
+        return routes?.map((item, index) => {
             return (
                 <Route
                     key={index}

@@ -72,15 +72,11 @@
 https://github.com/dpnguyen53/bc10reactrouting
 
 ===== Buổi 9 ======
- * Routing
+ * Routing (refactor)
  * HTTP & Axios
     npm install axios --save  <=> fetch
     - Lấy danh sách phim.
-    * Redux thunk <=> redux saga
-    * Loading
-    * Get Params From URL: route, component sử dụng match
-    * Detail Movie
-
+* Loading
 
 
 
