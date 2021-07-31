@@ -64,7 +64,40 @@
 
 ===== Buổi 8 ======
 * Lifecycle: stateful component
-* Routing
-    https://github.com/dpnguyen53/bc10reactrouting
-
+* Routing (basic)
+    - Homepage
+    - About
+    - ListMovie
     npm install react-router-dom --save
+https://github.com/dpnguyen53/bc10reactrouting
+
+===== Buổi 9 ======
+ * Routing
+ * HTTP & Axios
+    npm install axios --save  <=> fetch
+    - Lấy danh sách phim.
+    * Redux thunk <=> redux saga
+    * Loading
+    * Get Params From URL: route, component sử dụng match
+    * Detail Movie
+
+
+
+
+
+
+
+
+
+
+
+npm install redux-thunk --save   
+
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
