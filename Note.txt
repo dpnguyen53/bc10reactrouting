@@ -78,6 +78,21 @@ https://github.com/dpnguyen53/bc10reactrouting
     - Lấy danh sách phim.
 * Loading
 
+===== Buổi 10 ======
+* Redux thunk <=> redux saga: function generator (function *, yield)
+* Get Params From URL: route, component sử dụng match
+* Detail Movie
+
+
+
+
+
+
+
+
+* HOC
+* Routing Admin
+
 
 
 
