@@ -4,18 +4,32 @@ import "./App.css";
 // import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
 import PageNotFound from "./containers/PageNotFound";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Navbar from "./containers/HomeTemplate/_components/Navbar";
-import { routesHome } from "./routes";
+import { routesHome, routesAdmin } from "./routes";
+import HomeTemplate from "./containers/HomeTemplate";
+import AdminTemplate from "./containers/AdminTemplate";
 
 function App() {
     const renderLayoutHome = (routes) => {
         return routes?.map((item, index) => {
             return (
-                <Route
+                <HomeTemplate
                     key={index}
                     exact={item.exact}
                     path={item.path}
-                    component={item.component}
+                    Component={item.component}
+                />
+            );
+        });
+    };
+
+    const renderLayoutAdmin = (routes) => {
+        return routes?.map((item, index) => {
+            return (
+                <AdminTemplate
+                    key={index}
+                    exact={item.exact}
+                    path={item.path}
+                    Component={item.component}
                 />
             );
         });
@@ -23,9 +37,9 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Navbar />
             <Switch>
                 {renderLayoutHome(routesHome)}
+                {renderLayoutAdmin(routesAdmin)}
 
                 {/* Trang chủ - localhost:3000 */}
                 {/* <Route exact path="/" component={HomePage} /> */}

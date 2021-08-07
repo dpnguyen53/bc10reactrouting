@@ -83,32 +83,9 @@ https://github.com/dpnguyen53/bc10reactrouting
 * Get Params From URL: route, component sử dụng match
 * Detail Movie
 
-
-
-
-
-
-
-
-* HOC
-* Routing Admin
-
-
-
-
-
-
-
-
-
-
-npm install redux-thunk --save   
-
-import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
-);
+======== Buổi 11 ======
+* Routing (HomeTemplate & Admin Template)
+* HOC (Higher order component)
+    - Là 1 function => function này nó sẽ return về 1 Class Component (Function Component) khác
+* Render Props (Adv): Tái sử dụng
+* Routing (Adv)

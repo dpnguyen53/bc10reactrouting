@@ -29,45 +29,18 @@ export default class Navbar extends Component {
                                 exact
                                 activeClassName="active"
                                 className="nav-link"
-                                to="/"
+                                to="/dashboard"
                             >
-                                Home
+                                Dashboard
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink
                                 activeClassName="active"
                                 className="nav-link"
-                                to="/about"
+                                to="/add-user"
                             >
-                                About
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                activeClassName="active"
-                                className="nav-link"
-                                to="/list-movie"
-                            >
-                                ListMovie
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                activeClassName="active"
-                                className="nav-link"
-                                to="/hoc"
-                            >
-                                HOC
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                activeClassName="active"
-                                className="nav-link"
-                                to="/render-props"
-                            >
-                                Render Props
+                                Add User
                             </NavLink>
                         </li>
                     </ul>
