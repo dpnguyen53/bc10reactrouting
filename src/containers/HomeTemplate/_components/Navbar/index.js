@@ -70,6 +70,15 @@ export default class Navbar extends Component {
                                 Render Props
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink
+                                activeClassName="active"
+                                className="nav-link"
+                                to="/hooks"
+                            >
+                                Hooks
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>

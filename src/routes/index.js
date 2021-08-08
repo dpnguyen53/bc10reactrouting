@@ -6,6 +6,7 @@ import AddUser from "../containers/AdminTemplate/AddUser";
 import Dashboard from "../containers/AdminTemplate/Dashboard";
 import HocPage from "../containers/HomeTemplate/HocPage";
 import RenderProps from "../containers/HomeTemplate/RenderProps";
+import HooksPage from "../containers/HomeTemplate/HooksPage";
 
 const routesHome = [
     {
@@ -37,6 +38,11 @@ const routesHome = [
         exact: false,
         path: "/render-props",
         component: RenderProps,
+    },
+    {
+        exact: false,
+        path: "/hooks",
+        component: HooksPage,
     },
 ];
 

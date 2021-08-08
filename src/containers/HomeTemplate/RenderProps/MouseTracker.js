@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Mouse from "./Mouse";
+// import Mouse from "./Mouse";
 import Cat from "./Cat";
 // import MouseWithCat from "./MouseWithCat";
 import withMouse from "./withMouse";

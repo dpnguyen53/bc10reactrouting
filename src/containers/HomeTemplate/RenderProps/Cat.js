@@ -8,6 +8,7 @@ export default class Cat extends Component {
             <img
                 src="/logo192.png"
                 style={{ position: "absolute", left: mouse.x, top: mouse.y }}
+                alt=""
             />
         );
     }

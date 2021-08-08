@@ -89,3 +89,6 @@ https://github.com/dpnguyen53/bc10reactrouting
     - Là 1 function => function này nó sẽ return về 1 Class Component (Function Component) khác
 * Render Props (Adv): Tái sử dụng
 * Routing (Adv)
+
+======== Buổi 12 ======
+* Hooks
