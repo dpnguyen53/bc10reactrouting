@@ -92,3 +92,14 @@ https://github.com/dpnguyen53/bc10reactrouting
 
 ======== Buổi 12 ======
 * Hooks
+
+======== Buổi 13 ======
+* Auth
+* Guard Routing Admin
+
+
+
+
+
+
+* Add user(Token)

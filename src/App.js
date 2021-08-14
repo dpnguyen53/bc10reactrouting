@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routesHome, routesAdmin } from "./routes";
 import HomeTemplate from "./containers/HomeTemplate";
 import AdminTemplate from "./containers/AdminTemplate";
+import AuthPage from "./containers/AdminTemplate/Auth";
 
 function App() {
     const renderLayoutHome = (routes) => {
@@ -49,6 +50,9 @@ function App() {
 
                 {/* Trang listMovie - localhost:3000/list-movie */}
                 {/* <Route path="/list-movie" component={ListMoviePage} /> */}
+
+                {/* Auth */}
+                <Route path="/auth" component={AuthPage} />
 
                 {/* Trang không tồn tại - để cuối cùng */}
                 <Route path="" component={PageNotFound} />
