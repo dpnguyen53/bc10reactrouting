@@ -2,63 +2,70 @@ import "./App.css";
 // import HomePage from "./containers/HomeTemplate/HomePage";
 // import AboutPage from "./containers/HomeTemplate/AboutPage";
 // import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
+import { useEffect } from "react";
 import PageNotFound from "./containers/PageNotFound";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import { routesHome, routesAdmin } from "./routes";
 import HomeTemplate from "./containers/HomeTemplate";
 import AdminTemplate from "./containers/AdminTemplate";
 import AuthPage from "./containers/AdminTemplate/Auth";
+import { actTryLogin } from "./containers/AdminTemplate/Auth/modules/actions";
+import { useDispatch } from "react-redux";
 
-function App() {
-    const renderLayoutHome = (routes) => {
-        return routes?.map((item, index) => {
-            return (
-                <HomeTemplate
-                    key={index}
-                    exact={item.exact}
-                    path={item.path}
-                    Component={item.component}
-                />
-            );
-        });
-    };
+function App(props) {
+  const dispatch = useDispatch();
 
-    const renderLayoutAdmin = (routes) => {
-        return routes?.map((item, index) => {
-            return (
-                <AdminTemplate
-                    key={index}
-                    exact={item.exact}
-                    path={item.path}
-                    Component={item.component}
-                />
-            );
-        });
-    };
+  useEffect(() => {
+    dispatch(actTryLogin(props.history));
+  }, []);
 
-    return (
-        <BrowserRouter>
-            <Switch>
-                {renderLayoutHome(routesHome)}
-                {renderLayoutAdmin(routesAdmin)}
+  const renderLayoutHome = (routes) => {
+    return routes?.map((item, index) => {
+      return (
+        <HomeTemplate
+          key={index}
+          exact={item.exact}
+          path={item.path}
+          Component={item.component}
+        />
+      );
+    });
+  };
 
-                {/* Trang chủ - localhost:3000 */}
-                {/* <Route exact path="/" component={HomePage} /> */}
+  const renderLayoutAdmin = (routes) => {
+    return routes?.map((item, index) => {
+      return (
+        <AdminTemplate
+          key={index}
+          exact={item.exact}
+          path={item.path}
+          Component={item.component}
+        />
+      );
+    });
+  };
 
-                {/* Trang about - localhost:3000/about */}
-                {/* <Route path="/about" component={AboutPage} /> */}
+  return (
+    <Switch>
+      {renderLayoutHome(routesHome)}
+      {renderLayoutAdmin(routesAdmin)}
 
-                {/* Trang listMovie - localhost:3000/list-movie */}
-                {/* <Route path="/list-movie" component={ListMoviePage} /> */}
+      {/* Trang chủ - localhost:3000 */}
+      {/* <Route exact path="/" component={HomePage} /> */}
 
-                {/* Auth */}
-                <Route path="/auth" component={AuthPage} />
+      {/* Trang about - localhost:3000/about */}
+      {/* <Route path="/about" component={AboutPage} /> */}
 
-                {/* Trang không tồn tại - để cuối cùng */}
-                <Route path="" component={PageNotFound} />
-            </Switch>
-        </BrowserRouter>
-    );
+      {/* Trang listMovie - localhost:3000/list-movie */}
+      {/* <Route path="/list-movie" component={ListMoviePage} /> */}
+
+      {/* Auth */}
+      <Route path="/auth" component={AuthPage} />
+
+      {/* Trang không tồn tại - để cuối cùng */}
+      <Route path="" component={PageNotFound} />
+    </Switch>
+  );
 }
 
-export default App;
+export default withRouter(App);

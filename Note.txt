@@ -101,3 +101,20 @@ https://github.com/dpnguyen53/bc10reactrouting
 * Add user(Token)
 * Material UI
 * Styledd Component
+
+======== Buổi 15 ======
+* Refactor code call api
+    - Flow login Auth
+        + dispatch actAuthSuccess
+        + setHeader token
+        + timeout exp
+
+* Flow reload web (actTryLogin)
+        + timeout exp
+        + dispatch actAuthSuccess
+        + setHeader token 
+        
+* Logout
+    - remove accessToken
+    - redirect /auth
+    - clear reducer Auth
