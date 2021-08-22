@@ -118,3 +118,7 @@ https://github.com/dpnguyen53/bc10reactrouting
     - remove accessToken
     - redirect /auth
     - clear reducer Auth
+
+======== Buổi 16 ======
+* alias
+* Lazy load page
