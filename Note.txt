@@ -122,3 +122,12 @@ https://github.com/dpnguyen53/bc10reactrouting
 ======== Buổi 16 ======
 * alias
 * Lazy load page
+* Deploy app heroku
+* Build
+    - Hositing (Server)
+    - Domain
+
+* Java
+    build
+
+* Nextjs
