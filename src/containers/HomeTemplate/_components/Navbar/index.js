@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "images/logo192.png";
 
 export default class Navbar extends Component {
   render() {
@@ -7,7 +8,8 @@ export default class Navbar extends Component {
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         {/* Brand */}
         <a className="navbar-brand" href="#aa">
-          Navbar
+          {/* <img src="./../../../logo192.png" alt="" /> */}
+          <img src={logo} alt="" />
         </a>
         {/* Toggler/collapsibe Button */}
         <button
