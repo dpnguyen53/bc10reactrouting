@@ -12,6 +12,7 @@ api.interceptors.request.use(
     config.headers = {
       ...config.headers,
       TokenCyberSoft: TOKEN_CYBERSOFT,
+      Authorization: localStorage.getItem(ACCESS_TOKEN),
     };
     return config;
   },
